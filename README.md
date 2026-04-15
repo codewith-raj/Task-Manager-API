@@ -30,31 +30,6 @@ Swagger UI lets you explore and **test every endpoint directly in the browser** 
 
 ---
 
-## 🛠️ Deploy to Render (step-by-step)
-
-1. **Push this repo to GitHub** (commit everything first)
-
-2. Go to **[render.com](https://render.com)** → Sign up/in with GitHub
-
-3. Click **"New +"** → **"Web Service"** → Connect your GitHub repo
-
-4. Fill in **exactly** these settings:
-
-   | Setting | Value |
-   |---|---|
-   | **Root Directory** | `task-api` |
-   | **Runtime** | `Node` |
-   | **Build Command** | `npm install` |
-   | **Start Command** | `npm start` |
-   | **Plan** | Free |
-
-5. Click **"Create Web Service"** — Render builds and deploys automatically (~1 min)
-
-6. Copy your live URL (e.g. `https://task-api-xxxx.onrender.com`) and update the links above
-
-> Render automatically sets `PORT` and `RENDER_EXTERNAL_URL` — no env vars needed from you.
-
----
 
 ## Overview
 
