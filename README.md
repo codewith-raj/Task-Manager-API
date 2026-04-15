@@ -6,13 +6,54 @@
 
 ---
 
-## 🔗 Swagger UI — Interactive API Docs
+## 🚀 Live Demo (Render)
 
-> Start the server first: `cd task-api && npm install && npm start`
+> **No setup needed — runs in the browser instantly**
+
+| Link | Description |
+|---|---|
+| **👉 [/api-docs](https://your-app.onrender.com/api-docs)** | Swagger UI — interactive API explorer |
+| **👉 [/tasks](https://your-app.onrender.com/tasks)** | Raw task list (JSON) |
+| **👉 [/tasks/stats](https://your-app.onrender.com/tasks/stats)** | Task statistics (JSON) |
+
+> ⚠️ Update `your-app.onrender.com` with your actual Render URL after deploying.
+> **Note:** Free tier sleeps after 15 min inactivity — first request after sleep takes ~30s to wake up.
+
+---
+
+## 🔗 Swagger UI — Local
+
+> Run locally: `cd task-api && npm install && npm start`
 
 **👉 [http://localhost:3000/api-docs](http://localhost:3000/api-docs)**
 
 Swagger UI lets you explore and **test every endpoint directly in the browser** — no Postman or curl needed. Click any endpoint → "Try it out" → fill in fields → "Execute".
+
+---
+
+## 🛠️ Deploy to Render (step-by-step)
+
+1. **Push this repo to GitHub** (commit everything first)
+
+2. Go to **[render.com](https://render.com)** → Sign up/in with GitHub
+
+3. Click **"New +"** → **"Web Service"** → Connect your GitHub repo
+
+4. Fill in **exactly** these settings:
+
+   | Setting | Value |
+   |---|---|
+   | **Root Directory** | `task-api` |
+   | **Runtime** | `Node` |
+   | **Build Command** | `npm install` |
+   | **Start Command** | `npm start` |
+   | **Plan** | Free |
+
+5. Click **"Create Web Service"** — Render builds and deploys automatically (~1 min)
+
+6. Copy your live URL (e.g. `https://task-api-xxxx.onrender.com`) and update the links above
+
+> Render automatically sets `PORT` and `RENDER_EXTERNAL_URL` — no env vars needed from you.
 
 ---
 

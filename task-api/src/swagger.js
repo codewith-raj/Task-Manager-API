@@ -10,7 +10,14 @@ const options = {
         'A simple in-memory Task Manager API built with Node.js & Express. ' +
         'Supports creating, listing, updating, deleting, completing, and assigning tasks.',
     },
-    servers: [{ url: 'http://localhost:3000', description: 'Local development server' }],
+    servers: [
+      {
+        // Render sets RENDER_EXTERNAL_URL automatically (full https URL).
+        // Falls back to localhost for local development.
+        url: process.env.RENDER_EXTERNAL_URL || 'http://localhost:3000',
+        description: process.env.RENDER_EXTERNAL_URL ? 'Production (Render)' : 'Local development',
+      },
+    ],
     components: {
       schemas: {
         Task: {
