@@ -149,7 +149,7 @@ I found **3 confirmed bugs** and **2 potential issues** by reading the code and 
 
 ---
 
-#### Bug 1 — `getPaginated`: Off-by-one in page offset ✅ Fixed
+#### Bug 1 — `getPaginated`: Off-by-one in page offset  Fixed
 
 **File:** `src/services/taskService.js`
 
@@ -157,17 +157,17 @@ I found **3 confirmed bugs** and **2 potential issues** by reading the code and 
 
 ```js
 // Before (bug)
-const offset = page * limit;          // page=1, limit=2 → offset 2 ❌
+const offset = page * limit;          // page=1, limit=2 → offset 2 
 
 // After (fix)
-const offset = (page - 1) * limit;   // page=1, limit=2 → offset 0 ✅
+const offset = (page - 1) * limit;   // page=1, limit=2 → offset 0 
 ```
 
 **Impact:** `GET /tasks?page=1` would silently skip the first `limit` items. The very first page of results was always wrong.
 
 ---
 
-#### Bug 2 — `getByStatus`: Substring match instead of strict equality ✅ Fixed
+#### Bug 2 — `getByStatus`: Substring match instead of strict equality  Fixed
 
 **File:** `src/services/taskService.js`
 
@@ -185,7 +185,7 @@ const getByStatus = (status) => tasks.filter((t) => t.status === status);
 
 ---
 
-#### Bug 3 — `completeTask`: Silently resets task priority ✅ Fixed
+#### Bug 3 — `completeTask`: Silently resets task priority  Fixed
 
 **File:** `src/services/taskService.js`
 
@@ -195,14 +195,14 @@ const getByStatus = (status) => tasks.filter((t) => t.status === status);
 // Before (bug)
 const updated = {
   ...task,
-  priority: 'medium',   // ← silently corrupts data ❌
+  priority: 'medium',   // ← silently corrupts data 
   status: 'done',
   completedAt: new Date().toISOString(),
 };
 
 // After (fix)
 const updated = {
-  ...task,              // priority preserved from spread ✅
+  ...task,              // priority preserved from spread 
   status: 'done',
   completedAt: new Date().toISOString(),
 };
