@@ -12,20 +12,19 @@
 
 | Link | Description |
 |---|---|
-| **👉 [/api-docs](https://your-app.onrender.com/api-docs)** | Swagger UI — interactive API explorer |
-| **👉 [/tasks](https://your-app.onrender.com/tasks)** | Raw task list (JSON) |
-| **👉 [/tasks/stats](https://your-app.onrender.com/tasks/stats)** | Task statistics (JSON) |
+| **👉 [/api-docs](https://task-manager-api-6omj.onrender.com/api-docs)** | Swagger UI — interactive API explorer |
+| **👉 [/tasks](https://task-manager-api-6omj.onrender.com/tasks)** | Raw task list (JSON) |
+| **👉 [/tasks/stats](https://task-manager-api-6omj.onrender.com/tasks/stats)** | Task statistics (JSON) |
 
-> ⚠️ Update `your-app.onrender.com` with your actual Render URL after deploying.
 > **Note:** Free tier sleeps after 15 min inactivity — first request after sleep takes ~30s to wake up.
 
 ---
 
-## 🔗 Swagger UI — Local
+## 🔗 Swagger UI
 
-> Run locally: `cd task-api && npm install && npm start`
+**Live (Render):** [https://task-manager-api-6omj.onrender.com/api-docs](https://task-manager-api-6omj.onrender.com/api-docs)
 
-**👉 [http://localhost:3000/api-docs](http://localhost:3000/api-docs)**
+**Local:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs) — run `cd task-api && npm install && npm start` first
 
 Swagger UI lets you explore and **test every endpoint directly in the browser** — no Postman or curl needed. Click any endpoint → "Try it out" → fill in fields → "Execute".
 
