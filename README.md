@@ -6,6 +6,16 @@
 
 ---
 
+## 🔗 Swagger UI — Interactive API Docs
+
+> Start the server first: `cd task-api && npm install && npm start`
+
+**👉 [http://localhost:3000/api-docs](http://localhost:3000/api-docs)**
+
+Swagger UI lets you explore and **test every endpoint directly in the browser** — no Postman or curl needed. Click any endpoint → "Try it out" → fill in fields → "Execute".
+
+---
+
 ## Overview
 
 I was handed a small Task Manager API that had **zero tests** and several real bugs heading to production. Over the course of this assignment I:
